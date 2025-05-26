@@ -1,0 +1,16 @@
+# .air.toml
+
+# What to run when files change
+cmd = "go run main.go"
+
+# Watch files with these extensions
+include_ext = ["go", "tpl", "tmpl", "html"]
+
+# Ignore these folders
+exclude_dir = ["vendor", "node_modules", "tmp"]
+
+# Watch this directory
+root = "."
+
+# Use this to log nicely
+log_color = "true"

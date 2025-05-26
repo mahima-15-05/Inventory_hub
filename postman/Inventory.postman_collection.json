@@ -1,0 +1,1022 @@
+{
+	"info": {
+		"_postman_id": "2fa5219a-fbeb-4ac3-b5d0-ca1d4fde8074",
+		"name": "Inventory",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29222839",
+		"_collection_link": "https://maahi0.postman.co/workspace/maahi-Workspace~bfd762e0-4b1b-4d56-80fc-ca911b613aad/collection/29222839-2fa5219a-fbeb-4ac3-b5d0-ca1d4fde8074?action=share&source=collection_link&creator=29222839"
+	},
+	"item": [
+		{
+			"name": "get all products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get all products",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 26 May 2025 10:11:56 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "860"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						}
+					],
+					"cookie": [],
+					"body": "[{\"ID\":1,\"Name\":\"Samsung Phone\",\"Description\":\"Multitasking. Samsung loyalists have long placed multitasking capabilities at the top of the list of reasons they prefer Galaxy devices. Galaxy phones leverage crisp, expansive screens to give users various options for working across multiple apps\",\"Price\":120000,\"Quantity\":0},{\"ID\":2,\"Name\":\"Tresemme\",\"Description\":\"TRESemmé's description often emphasizes its salon-quality products and its ability to help women achieve salon-worthy hair at home. The brand aims to empower women with confidence through their hair care products and styling tools, offering salon-inspired and tested products to create desired hairstyles. They also focus on providing innovative and effective hair care solutions, including those that address specific hair needs like damage repair or smoothing. \",\"Price\":120,\"Quantity\":20}]\n"
+				}
+			]
+		},
+		{
+			"name": "product/1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/product/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"product",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "product/1",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/product/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"product",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 26 May 2025 10:20:36 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "324"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						}
+					],
+					"cookie": [],
+					"body": "{\"ID\":1,\"Name\":\"Samsung Phone\",\"Description\":\"Multitasking. Samsung loyalists have long placed multitasking capabilities at the top of the list of reasons they prefer Galaxy devices. Galaxy phones leverage crisp, expansive screens to give users various options for working across multiple apps\",\"Price\":120000,\"Quantity\":0}\n"
+				}
+			]
+		},
+		{
+			"name": "/add-product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Name\":\"Sanatizer all in one\",\r\n    \"Quantity\":20,\r\n    \"Price\":1200,\r\n    \"Description\":\"abc abc cbcsk \"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/add-product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"add-product"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/add-product",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\":\"Product hair serum1\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/add-product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"add-product"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 26 May 2025 10:36:24 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "79"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						}
+					],
+					"cookie": [],
+					"body": "{\"ID\":10,\"Name\":\"Product hair serum1\",\"Description\":\"\",\"Price\":0,\"Quantity\":0}\n"
+				},
+				{
+					"name": "/add-product",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\":\"Sanatizer all in one\",\r\n    \"Quantity\":20,\r\n    \"Price\":1200,\r\n    \"Description\":\"abc abc cbcsk \"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/add-product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"add-product"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 26 May 2025 12:57:47 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "97"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						}
+					],
+					"cookie": [],
+					"body": "{\"ID\":6,\"Name\":\"Sanatizer all in one\",\"Description\":\"abc abc cbcsk \",\"Price\":1200,\"Quantity\":20}\n"
+				}
+			]
+		},
+		{
+			"name": "update-product/1",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Name\":\"Product hair serum21\",\r\n    \"Quantity\":12\r\n\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/update-product/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"update-product",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "update-product/1",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\":\"Product hair serum21\",\r\n    \"Quantity\":12\r\n\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/update-product/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"update-product",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 26 May 2025 10:42:10 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "332"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						}
+					],
+					"cookie": [],
+					"body": "{\"ID\":1,\"Name\":\"Product hair serum21\",\"Description\":\"Multitasking. Samsung loyalists have long placed multitasking capabilities at the top of the list of reasons they prefer Galaxy devices. Galaxy phones leverage crisp, expansive screens to give users various options for working across multiple apps\",\"Price\":120000,\"Quantity\":12}\n"
+				}
+			]
+		},
+		{
+			"name": "delete-product/7",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Name\":\"Product hair serum21\",\r\n    \"Quantity\":12\r\n\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/delete-product/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"delete-product",
+						"7"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "delete-product/7",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\":\"Product hair serum21\",\r\n    \"Quantity\":12\r\n\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/delete-product/7",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"delete-product",
+								"7"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 26 May 2025 10:47:52 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "43"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						}
+					],
+					"cookie": [],
+					"body": "{\"message\":\"Product deleted successfully\"}\n"
+				}
+			]
+		},
+		{
+			"name": "get all sales-order",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Name\":\"Product hair serum21\",\r\n    \"Quantity\":12\r\n\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/sales-order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"sales-order"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get all sales-order",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\":\"Product hair serum21\",\r\n    \"Quantity\":12\r\n\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/sales-order",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"sales-order"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 26 May 2025 10:48:33 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "[{\"ID\":1,\"ProductID\":1,\"Product\":{\"ID\":1,\"Name\":\"Product hair serum21\",\"Description\":\"Multitasking. Samsung loyalists have long placed multitasking capabilities at the top of the list of reasons they prefer Galaxy devices. Galaxy phones leverage crisp, expansive screens to give users various options for working across multiple apps\",\"Price\":120000,\"Quantity\":12},\"Quantity\":2,\"TotalPrice\":240000,\"OrderDate\":\"2025-05-26T14:08:29.992+05:30\"},{\"ID\":2,\"ProductID\":1,\"Product\":{\"ID\":1,\"Name\":\"Product hair serum21\",\"Description\":\"Multitasking. Samsung loyalists have long placed multitasking capabilities at the top of the list of reasons they prefer Galaxy devices. Galaxy phones leverage crisp, expansive screens to give users various options for working across multiple apps\",\"Price\":120000,\"Quantity\":12},\"Quantity\":2,\"TotalPrice\":240000,\"OrderDate\":\"2025-05-26T14:21:20.96+05:30\"},{\"ID\":3,\"ProductID\":1,\"Product\":{\"ID\":1,\"Name\":\"Product hair serum21\",\"Description\":\"Multitasking. Samsung loyalists have long placed multitasking capabilities at the top of the list of reasons they prefer Galaxy devices. Galaxy phones leverage crisp, expansive screens to give users various options for working across multiple apps\",\"Price\":120000,\"Quantity\":12},\"Quantity\":2,\"TotalPrice\":240000,\"OrderDate\":\"2025-05-26T14:21:52.999+05:30\"},{\"ID\":4,\"ProductID\":1,\"Product\":{\"ID\":1,\"Name\":\"Product hair serum21\",\"Description\":\"Multitasking. Samsung loyalists have long placed multitasking capabilities at the top of the list of reasons they prefer Galaxy devices. Galaxy phones leverage crisp, expansive screens to give users various options for working across multiple apps\",\"Price\":120000,\"Quantity\":12},\"Quantity\":2,\"TotalPrice\":240000,\"OrderDate\":\"2025-05-26T14:22:00.961+05:30\"},{\"ID\":5,\"ProductID\":1,\"Product\":{\"ID\":1,\"Name\":\"Product hair serum21\",\"Description\":\"Multitasking. Samsung loyalists have long placed multitasking capabilities at the top of the list of reasons they prefer Galaxy devices. Galaxy phones leverage crisp, expansive screens to give users various options for working across multiple apps\",\"Price\":120000,\"Quantity\":12},\"Quantity\":2,\"TotalPrice\":240000,\"OrderDate\":\"2025-05-26T14:22:25.31+05:30\"},{\"ID\":6,\"ProductID\":1,\"Product\":{\"ID\":1,\"Name\":\"Product hair serum21\",\"Description\":\"Multitasking. Samsung loyalists have long placed multitasking capabilities at the top of the list of reasons they prefer Galaxy devices. Galaxy phones leverage crisp, expansive screens to give users various options for working across multiple apps\",\"Price\":120000,\"Quantity\":12},\"Quantity\":0,\"TotalPrice\":0,\"OrderDate\":\"2025-05-26T14:23:19.561+05:30\"},{\"ID\":7,\"ProductID\":1,\"Product\":{\"ID\":1,\"Name\":\"Product hair serum21\",\"Description\":\"Multitasking. Samsung loyalists have long placed multitasking capabilities at the top of the list of reasons they prefer Galaxy devices. Galaxy phones leverage crisp, expansive screens to give users various options for working across multiple apps\",\"Price\":120000,\"Quantity\":12},\"Quantity\":0,\"TotalPrice\":0,\"OrderDate\":\"2025-05-26T14:23:26.659+05:30\"}]\n"
+				}
+			]
+		},
+		{
+			"name": "add-sales-order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"ProductID\":2,\r\n  \"Quantity\":1\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/add-sales-order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"add-sales-order"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "add-sales-order",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"ProductID\":2,\r\n  \"Quantity\":1\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/add-sales-order",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"add-sales-order"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 26 May 2025 10:51:35 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "641"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						}
+					],
+					"cookie": [],
+					"body": "{\"ID\":9,\"ProductID\":2,\"Product\":{\"ID\":2,\"Name\":\"Tresemme\",\"Description\":\"TRESemmé's description often emphasizes its salon-quality products and its ability to help women achieve salon-worthy hair at home. The brand aims to empower women with confidence through their hair care products and styling tools, offering salon-inspired and tested products to create desired hairstyles. They also focus on providing innovative and effective hair care solutions, including those that address specific hair needs like damage repair or smoothing. \",\"Price\":120,\"Quantity\":19},\"Quantity\":1,\"TotalPrice\":120,\"OrderDate\":\"2025-05-26T16:21:35.183+05:30\"}\n"
+				}
+			]
+		},
+		{
+			"name": "update-sales-order/9",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Quantity\":11\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/update-sales-order/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"update-sales-order",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "update-sales-order/9",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ProductID\":2,\r\n  \"Quantity\":11\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/update-sales-order/9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"update-sales-order",
+								"9"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 26 May 2025 11:27:04 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "642"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						}
+					],
+					"cookie": [],
+					"body": "{\"ID\":9,\"ProductID\":2,\"Product\":{\"ID\":2,\"Name\":\"Tresemme\",\"Description\":\"TRESemmé's description often emphasizes its salon-quality products and its ability to help women achieve salon-worthy hair at home. The brand aims to empower women with confidence through their hair care products and styling tools, offering salon-inspired and tested products to create desired hairstyles. They also focus on providing innovative and effective hair care solutions, including those that address specific hair needs like damage repair or smoothing. \",\"Price\":120,\"Quantity\":9},\"Quantity\":11,\"TotalPrice\":1320,\"OrderDate\":\"2025-05-26T16:57:04.543+05:30\"}\n"
+				}
+			]
+		},
+		{
+			"name": "delete-sales-order/9",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ProductID\":2,\r\n  \"Quantity\":11\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/delete-sales-order/9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"delete-sales-order",
+						"9"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "delete-sales-order/9",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ProductID\":2,\r\n  \"Quantity\":11\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:3000/delete-sales-order/9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"delete-sales-order",
+								"9"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 26 May 2025 11:28:13 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "35"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						}
+					],
+					"cookie": [],
+					"body": "\"Sales order deleted successfully\"\n"
+				}
+			]
+		},
+		{
+			"name": "add-purchase-order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"ProductID\":1,\r\n    \"Quantity\":12,\r\n    \"Supplier\":\"Maahi Industries\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/add-purchase-order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"add-purchase-order"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "add-purchase-order",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ProductID\":9,\r\n    \"Quantity\":12\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/add-purchase-order",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"add-purchase-order"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 26 May 2025 11:33:32 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "217"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						}
+					],
+					"cookie": [],
+					"body": "{\"ID\":13,\"ProductID\":9,\"Product\":{\"ID\":9,\"Name\":\"Product hair serum\",\"Description\":\"This is a new product description\",\"Price\":0,\"Quantity\":21},\"Quantity\":12,\"Supplier\":\"\",\"OrderDate\":\"2025-05-26T17:03:32.614+05:30\"}\n"
+				},
+				{
+					"name": "add-purchase-order",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"ProductID\":1,\r\n    \"Quantity\":123\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/add-purchase-order",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"add-purchase-order"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 26 May 2025 12:21:27 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "440"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						}
+					],
+					"cookie": [],
+					"body": "{\"ID\":14,\"ProductID\":1,\"Product\":{\"ID\":1,\"Name\":\"Product hair serum21\",\"Description\":\"Multitasking. Samsung loyalists have long placed multitasking capabilities at the top of the list of reasons they prefer Galaxy devices. Galaxy phones leverage crisp, expansive screens to give users various options for working across multiple apps\",\"Price\":120000,\"Quantity\":138},\"Quantity\":123,\"Supplier\":\"\",\"OrderDate\":\"2025-05-26T17:51:27.306+05:30\"}\n"
+				},
+				{
+					"name": "add-purchase-order",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"ProductID\":1,\r\n    \"Quantity\":12,\r\n    \"Supplier\":\"Maahi Industries\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/add-purchase-order",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"add-purchase-order"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 26 May 2025 12:54:50 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "195"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						}
+					],
+					"cookie": [],
+					"body": "{\"ID\":6,\"ProductID\":1,\"Product\":{\"ID\":1,\"Name\":\"Toy\",\"Description\":\"desc--abc\",\"Price\":120,\"Quantity\":92},\"Quantity\":12,\"Supplier\":\"Maahi Industries\",\"OrderDate\":\"2025-05-26T18:24:50.886+05:30\"}\n"
+				}
+			]
+		},
+		{
+			"name": "update-purchase-order/2",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \r\n    \"Quantity\":123\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/update-purchase-order/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"update-purchase-order",
+						"2"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "update-purchase-order/2",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \r\n    \"Quantity\":123\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/update-purchase-order/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"update-purchase-order",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 26 May 2025 12:22:06 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "641"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						}
+					],
+					"cookie": [],
+					"body": "{\"ID\":2,\"ProductID\":2,\"Product\":{\"ID\":2,\"Name\":\"Tresemme\",\"Description\":\"TRESemmé's description often emphasizes its salon-quality products and its ability to help women achieve salon-worthy hair at home. The brand aims to empower women with confidence through their hair care products and styling tools, offering salon-inspired and tested products to create desired hairstyles. They also focus on providing innovative and effective hair care solutions, including those that address specific hair needs like damage repair or smoothing. \",\"Price\":120,\"Quantity\":133},\"Quantity\":123,\"Supplier\":\"\",\"OrderDate\":\"2025-05-26T17:52:06.517+05:30\"}\n"
+				}
+			]
+		},
+		{
+			"name": "delete-purchase-order/5",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/delete-purchase-order/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"delete-purchase-order",
+						"5"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "delete-purchase-order/5",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/delete-purchase-order/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"delete-purchase-order",
+								"5"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 26 May 2025 13:05:24 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "50"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						}
+					],
+					"cookie": [],
+					"body": "{\"message\":\"Purchase order deleted successfully\"}\n"
+				}
+			]
+		},
+		{
+			"name": "get all purchase-orders",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/purchase-orders",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"purchase-orders"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get all purchase-orders",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/purchase-orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"purchase-orders"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 26 May 2025 15:45:27 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "782"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						}
+					],
+					"cookie": [],
+					"body": "[{\"ID\":1,\"ProductID\":1,\"Product\":{\"ID\":1,\"Name\":\"Toy\",\"Description\":\"desc--abc\",\"Price\":120,\"Quantity\":68},\"Quantity\":12,\"Supplier\":\"Maahi Industries\",\"OrderDate\":\"2025-05-26T18:24:13.965+05:30\"},{\"ID\":2,\"ProductID\":1,\"Product\":{\"ID\":1,\"Name\":\"Toy\",\"Description\":\"desc--abc\",\"Price\":120,\"Quantity\":68},\"Quantity\":12,\"Supplier\":\"Maahi Industries\",\"OrderDate\":\"2025-05-26T18:24:27.283+05:30\"},{\"ID\":3,\"ProductID\":1,\"Product\":{\"ID\":1,\"Name\":\"Toy\",\"Description\":\"desc--abc\",\"Price\":120,\"Quantity\":68},\"Quantity\":12,\"Supplier\":\"Maahi Industries\",\"OrderDate\":\"2025-05-26T18:24:35.274+05:30\"},{\"ID\":6,\"ProductID\":1,\"Product\":{\"ID\":1,\"Name\":\"Toy\",\"Description\":\"desc--abc\",\"Price\":120,\"Quantity\":68},\"Quantity\":12,\"Supplier\":\"Maahi Industries\",\"OrderDate\":\"2025-05-26T18:24:50.886+05:30\"}]\n"
+				}
+			]
+		}
+	]
+}
